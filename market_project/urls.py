@@ -21,6 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("company/", include("company_app.urls")),
     path("", MainPage.as_view(), name='main_page'),
-    path("product/", include("product_app.urls")),
-    path("kassa/", include("stock_app.urls"))
+    path("product/", include("product_app.urls"))
 ]
