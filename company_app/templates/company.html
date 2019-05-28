@@ -1,0 +1,54 @@
+{%load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="jumbotron">
+        <h1>Company</h1>
+        </div>
+        <div class="container">
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'main_page' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'product' %}">Product</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Company</li>
+            </ol>
+        </nav>
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for company in companies %}
+                    <tr>
+                        <td><a href="{% url 'products_by_firm' company.pk %}">{{company.name}}</a></td>
+                        <td><a href="{% url 'products_by_firm' company.pk %}">{{company.contact_number}}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            <a href = "{%url 'addcompany'%}"><button class = "form-control btn btn-success">AddCompany</button></a>
+        </div>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</body>
+
+</html>

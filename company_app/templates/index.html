@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MARKET</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url("https://apps.tourisme-alsace.info/photos/colmar/photos/235011522_1.jpg");
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: palegoldenrod;
+            font-weight: bold;
+        }
+        .product{
+            border-radius: 15%;
+        }
+     
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>G R A N D  M A R K E T {{count}}</h1>
+        <div class="form-group row">
+            <div class="col-4">
+                <a href="{%url 'company' %}"><button class="form-control btn btn-primary product">Company </button></a>
+            </div>
+            <div class="offset-4 col-4">
+                <a href="{%url 'product' %}"><button class="form-control btn btn-primary product">Product</button></a>
+            </div>
+            <div class="offset-4 col-4">
+                <button class="form-control btn btn-primary product">Kassa</button>
+            </div>          
+
+        </div>
+        <div class="section">
+            {{count}}
+        </div>
+    </div>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</body>
+
+</html>
